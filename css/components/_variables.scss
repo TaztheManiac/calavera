@@ -1,0 +1,63 @@
+// ------------------------------
+// Global
+// ------------------------------
+$margin-elements: 1rem;
+$margin-rows: 3rem;
+
+// ------------------------------
+// Grid
+// ------------------------------
+$gutter-width: 15px;
+$container-width: 100%;
+$container-max-width: 1200px;
+
+$num-cols: 12;
+
+$breakpoint-sm: 540px;
+$breakpoint-md: 840px;
+$breakpoint-lg: 1080px;
+
+// ------------------------------
+// Typography
+// ------------------------------
+$font-size: 16px;
+
+$heading-font-size: 1rem;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 600;
+
+$heading-font-weight: $font-weight-normal;
+
+$text-color: #484848;
+
+$font-family: "Open Sans", "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+$font-family-monospace: "Droid Sans Mono", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+
+$line-height: 1.5;
+
+$letter-spacing: .02em;
+
+$blockquote-border: solid 4px #cecece;
+
+$anchor-color: #039BE5;
+$anchor-color-active: #0277BD;
+
+$code-bg: #f8f8f8;
+$code-border: solid 1px #ebebeb;
+
+$kbd-bg: #454d5e;
+$kbd-border: solid 1px #3a414f;
+
+$mark-bg: #ffe067;
+
+// ------------------------------
+// Tables
+// ------------------------------
+$table-bg: #f8f8f8;
+
+$table-padding: .8rem .6rem;
+
+$table-border: solid 1px #ebebeb;

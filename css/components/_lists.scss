@@ -1,0 +1,27 @@
+ul, ol {
+  margin-top: 0;
+  margin-bottom: $margin-elements;
+  padding-left: $gutter-width + 3;
+
+  li {
+    line-height: 1.8;
+  }
+}
+
+
+dl {
+  margin-top: 0;
+  margin-bottom: $margin-elements;
+
+  dt {
+    font-weight: $font-weight-bold;
+  }
+
+  dd {
+    margin-left: $gutter-width;
+
+    &:not(:last-child) {
+      margin-bottom: $margin-elements / 2;
+    }
+  }
+}

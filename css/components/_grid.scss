@@ -1,0 +1,96 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $gutter-width;
+  padding-right: $gutter-width;
+  width: $container-width;
+  max-width: $container-max-width;
+}
+
+.row {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat($num-cols, 1fr);
+  grid-column-gap: $gutter-width;
+  margin-bottom: $margin-rows;
+}
+
+.col {
+  grid-column-end: span ($num-cols + 1);
+}
+
+$i: 1;
+@while $i <= $num-cols {
+  .sm-#{$i} {
+    grid-column-end: span $i;
+  }
+  $i: $i + 1;
+}
+
+$i: 1;
+@while $i <= $num-cols {
+  .sm-offset-#{$i} {
+    grid-column-start: $i;
+  }
+  $i: $i + 1;
+}
+
+$i: 1;
+@while $i <= $num-cols {
+  .sm-order-#{$i} {
+    order: $i;
+  }
+  $i: $i + 1;
+}
+
+@media (min-width: $breakpoint-sm) {
+  $i: 1;
+  @while $i <= $num-cols {
+    .md-#{$i} {
+      grid-column-end: span $i;
+    }
+    $i: $i + 1;
+  }
+
+  $i: 1;
+  @while $i <= $num-cols {
+    .md-offset-#{$i} {
+      grid-column-start: $i;
+    }
+    $i: $i + 1;
+  }
+
+  $i: 1;
+  @while $i <= $num-cols {
+    .md-order-#{$i} {
+      order: $i;
+    }
+    $i: $i + 1;
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  $i: 1;
+  @while $i <= $num-cols {
+    .lg-#{$i} {
+      grid-column-end: span $i;
+    }
+    $i: $i + 1;
+  }
+
+  $i: 1;
+  @while $i <= $num-cols {
+    .lg-offset-#{$i} {
+      grid-column-start: $i;
+    }
+    $i: $i + 1;
+  }
+
+  $i: 1;
+  @while $i <= $num-cols {
+    .lg-order-#{$i} {
+      order: $i;
+    }
+    $i: $i + 1;
+  }
+}

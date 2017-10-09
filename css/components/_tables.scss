@@ -1,0 +1,23 @@
+table {
+  margin-bottom: $margin-elements;
+  width: 100%;
+  border-collapse: collapse;
+
+  thead {
+    text-align: left;
+    color: lighten($text-color, 10);
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: $table-bg;
+  }
+
+  th, td {
+    padding: $table-padding;
+    border-bottom: $table-border;
+  }
+
+  th {
+    border-bottom-width: 2px;
+  }
+}
