@@ -8,7 +8,6 @@
 }
 
 .row {
-  max-width: 100%;
   display: grid;
   grid-template-columns: repeat($num-cols, 1fr);
   grid-column-gap: $gutter-width;

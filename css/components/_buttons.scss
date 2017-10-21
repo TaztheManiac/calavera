@@ -1,0 +1,103 @@
+@mixin button-solid($color) {
+  color: #fff;
+  background-color: $color;
+
+  &:hover, &:focus {
+    background-color: lighten($color, 4);
+    border-color: lighten($color, 4);
+  }
+
+  &:active,
+  &.active {
+    background-color: darken($color, 4);
+    color: #fff;
+  }
+
+  &[disabled],
+  &:disabled,
+  &.disabled {
+    background-color: lighten($color, 10);
+    box-shadow: none;
+
+    &:hover {
+      transform: translate3d(0,0,0);
+      cursor: not-allowed;
+    }
+  }
+}
+
+@mixin button-clear($color) {
+  color: $color;
+  background-color: transparent;
+  box-shadow: none;
+
+  &:hover, &:focus {
+    color: lighten($color, 4);
+    background-color: transparent;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    box-shadow: none;
+  }
+
+  &:active,
+  &.active {
+    color: darken($color, 4);
+    text-shadow: none;
+  }
+
+  &[disabled],
+  &:disabled,
+  &.disabled {
+    color: lighten($color, 10);
+
+    &:hover {
+      transform: translate3d(0,0,0);
+      text-shadow: none;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  font-weight: $font-weight-bold;
+  letter-spacing: .05rem;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transform: translate3d(0,0,0);
+  -webkit-tap-highlight-color: transparent;
+
+  padding: .6rem 1.4rem;
+  border-radius: $border-radius-base;
+
+  color: lighten($text-color, 5);
+  background-color: #eee;
+  border: none;
+
+  &:hover, &:focus {
+    text-decoration: none;
+    background-color: lighten(#eee, 2);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);
+    transform: translate3d(0,-2px,0);
+  }
+
+  &:active {
+    color: inherit;
+    background-color: darken(#eee, 4);
+    box-shadow: none;
+    transform: translate3d(0,0,0);
+  }
+}
+
+.btn-primary { @include button-solid(#61a8ff); }
+.btn-primary-clear { @include button-clear(#61a8ff); }
+
+.btn-success { @include button-solid(#4bd763); }
+.btn-success-clear { @include button-clear(#4bd763); }
+
+.btn-danger  { @include button-solid(#ff6961); }
+.btn-danger-clear  { @include button-clear(#ff6961); }

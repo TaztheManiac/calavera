@@ -3,6 +3,10 @@ ul, ol {
   margin-bottom: $margin-elements;
   padding-left: $gutter-width + 3;
 
+  ul, ol {
+    margin-bottom: 0;
+  }
+
   li {
     line-height: 1.8;
   }

@@ -2,7 +2,9 @@
 // Global
 // ------------------------------
 $margin-elements: 1rem;
-$margin-rows: 3rem;
+$margin-rows: 1rem;
+
+$border-radius-base: .2rem;
 
 // ------------------------------
 // Grid
@@ -20,7 +22,7 @@ $breakpoint-lg: 1080px;
 // ------------------------------
 // Typography
 // ------------------------------
-$font-size: 16px;
+$font-size: 14px;
 
 $heading-font-size: 1rem;
 
@@ -32,13 +34,13 @@ $heading-font-weight: $font-weight-normal;
 
 $text-color: #484848;
 
-$font-family: "Open Sans", "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family: "Open Sans", sans-serif;
 
-$font-family-monospace: "Droid Sans Mono", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+$font-family-monospace: "Droid Sans Mono", monospace;
 
 $line-height: 1.5;
 
-$letter-spacing: .02em;
+$letter-spacing: .02rem;
 
 $blockquote-border: solid 4px #cecece;
 
@@ -57,7 +59,11 @@ $mark-bg: #ffe067;
 // Tables
 // ------------------------------
 $table-bg: #f8f8f8;
-
 $table-padding: .8rem .6rem;
-
 $table-border: solid 1px #ebebeb;
+
+// ------------------------------
+// Forms
+// ------------------------------
+$form-field-padding: .5rem;
+$form-field-border: solid 1px #c5c5c5;

@@ -1,9 +1,29 @@
-body {
-  font-family: $font-family;
+*, *::before, *::after {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+html {
   font-size: $font-size;
+  font-family: $font-family;
   color: $text-color;
   line-height: $line-height;
   letter-spacing: $letter-spacing;
+}
+
+@media (min-width: $breakpoint-sm) {
+  html {
+    font-size: $font-size + 1;
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  html {
+    font-size: $font-size + 2;
+  }
 }
 
 h1, .h1 { font-size: $heading-font-size + 1.1; }
@@ -34,7 +54,7 @@ h6, .h6 { font-size: $heading-font-size + .1; }
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-top: 0;
-  margin-bottom: $margin-elements / 2;
+  margin-bottom: $margin-elements;
   font-weight: $heading-font-weight;
   line-height: 1.1;
   color: lighten($text-color, 10);
@@ -73,8 +93,12 @@ blockquote {
   }
 }
 
-abbr {
+abbr[title] {
   cursor: help;
+}
+
+code, kbd, samp, mark {
+  display: inline-block;
 }
 
 code, kbd, samp {
@@ -105,11 +129,12 @@ pre {
   display: block;
   margin-top: 0;
   margin-bottom: $margin-elements;
-  padding: .4rem;
+  padding: .5rem;
   background-color: $code-bg;
   border: $code-border;
   border-radius: .4rem;
   overflow-x: auto;
+  overflow-y: hidden;
 
   code {
     padding: 0;
